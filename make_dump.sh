@@ -12,9 +12,16 @@ echo "##                                          ##"
 echo "##############################################"
 echo ""
 WORK_FOLDER="conf";
-config_file="$WORK_FOLDER/dumps.cfg";
+config_file="$WORK_FOLDER/example_conf.sh";
 
-if [ "$#" -gt "0"] 
+#if [ $ARGUMENTS['h'] || $ARGUMENTS['help'] ]
+#  then 
+#  echo "Ayuda"
+#  exit 0
+#fi
+
+
+if [ "$#" -gt  "0" ] 
   then
   config_file=$1; 
 fi
@@ -44,7 +51,6 @@ then
 	done
     cmd="$cmd $NAME_DB";
     echo " >> Ejecutando: \"$cmd\...";
-    echo " >> PG_DUMP Dice:"
     eval $cmd
 
     exit_code=$?
