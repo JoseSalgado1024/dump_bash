@@ -11,8 +11,13 @@ echo "##       $(date)       ##"
 echo "##                                          ##"
 echo "##############################################"
 echo ""
-WORK_FOLDER="/home/jsalgado/dev_work/Pentaho/rocket";
+WORK_FOLDER="conf";
 config_file="$WORK_FOLDER/dumps.cfg";
+
+if [ "$#" -gt "0"] 
+  then
+  config_file=$1; 
+fi
 
 if [ -f "$config_file" ]
 then
@@ -66,6 +71,6 @@ then
     echo "" 
     exit $exit_code;
 else
-    echo " >> Archivo de configuracion [$config_file] no encontrado..."
+    echo " >> Imposible cargar configuracion de [$config_file], archivo no encontrado..."
     exit 1;
 fi
