@@ -4,13 +4,13 @@
 ## ORIGIN ##
 ############
 
-HOST_DB="sepa-prod-historico-db.c2setm4u4yff.us-east-1.rds.amazonaws.com";
-NAME_DB="sepa_db";
-PORT_DB="5432";
+HOST_DB="some_host";
+NAME_DB="some_db_name";
+PORT_DB="db_port";
 
 # USER DATA
-USER_DB="gobiernoabierto";
-PASS_DB="gobabierto";
+USER_DB="your_user";
+PASS_DB="password_user";
 
 # TABLES TO DUMP
 TABLES=("table_01" "table_02" "table_03" "table_04");
@@ -20,7 +20,7 @@ DUMP_FILENAME="dump"
 ## DESTINATION ##
 #################
 
-BUCKET_NAME="secom-sepa/dumps/sepa_db_historica";
+BUCKET_NAME="some_aws_bucket";
 
-# Completar con true o false
+# Comprimir? Completar con true o false
 COMPRESS_DUMP=true;
